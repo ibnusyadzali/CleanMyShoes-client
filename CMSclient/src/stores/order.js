@@ -2,9 +2,7 @@ import { defineStore, mapActions } from "pinia";
 import axios from "axios";
 import { useFetchStore } from "./fetchData";
 // const server = "http://localhost:3000/";
-
-
-const server = "https://cleanmyshoes-production.up.railway.app/";
+const server = "https://cleanmyshoes-server.ibnusyadzali.com/";
 
 export const useOrderStore = defineStore("order", {
   state() {
@@ -51,7 +49,7 @@ export const useOrderStore = defineStore("order", {
           (this.photo = ""),
           (this.pickUpAddress = ""),
           (this.ServiceId = "");
-        this.router.push("/services");
+        this.router.push("/history");
       } catch (error) {
         console.log(error);
       }
